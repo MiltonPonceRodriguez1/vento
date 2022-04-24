@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { MotorcycleNewComponent } from './components/motorcycle-new/motorcycle-new.component';
@@ -10,7 +11,8 @@ import { MotorcycleNewComponent } from './components/motorcycle-new/motorcycle-n
     MotorcycleNewComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

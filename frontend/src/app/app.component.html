@@ -14,22 +14,23 @@
         <li class="nav-item dropdown">
           <a class="nav-link active dropdown-toggle" href="#" id="manageDropdown" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-brands fa-d-and-d fa-2x"></i>
-            <i class="fa fa-twitter fa-1x"></i>
+            <!--<i class="fa-brands fa-d-and-d fa-2x"></i>
+            <i class="fa fa-twitter fa-1x"></i>-->
             <i class="fa-solid fa-bicycle"></i>
-            <i class="fa fa-bicycle" aria-hidden="true"></i>
+            
+            <fa-icon [icon]="faUserLock"></fa-icon>
             Manage
           </a>
           <ul class="dropdown-menu" aria-labelledby="manageDropdown">
             <li>
               <a class="dropdown-item" href="#">
-                <i class="fa-solid fa-motorcycle fa-1x"></i>
+                <fa-icon [icon]="faMotorcycle"></fa-icon>
                 Register motorcycle
               </a>
             </li>
             <li>
               <a class="dropdown-item" href="#">
-                <i class="fa-solid fa-motorcycle fa-1x"></i>
+                <fa-icon [icon]="faMotorcycle"></fa-icon>
                 Update motorcycle
               </a>
             </li>
@@ -38,7 +39,7 @@
             </li>
             <li>
               <a class="dropdown-item" href="#">
-                <i class="fa-solid fa-motorcycle fa-1x"></i>
+                <fa-icon [icon]="faMotorcycle"></fa-icon>
                 Delete motorcycle
               </a></li>
           </ul>

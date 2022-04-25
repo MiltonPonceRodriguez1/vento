@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MotorcycleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/motorcycle/index', [MotorcycleController::class, 'index']);
+Route::post('/motorcycle/store', [MotorcycleController::class, 'store']);
+Route::put('/motorcycle/update/{id}', [MotorcycleController::class, 'update']);
+Route::delete('/motorcycle/destroy/{id}', [MotorcycleController::class, 'destroy']);
+

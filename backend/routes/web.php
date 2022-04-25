@@ -22,4 +22,6 @@ Route::get('/motorcycle/index', [MotorcycleController::class, 'index']);
 Route::post('/motorcycle/store', [MotorcycleController::class, 'store']);
 Route::put('/motorcycle/update/{id}', [MotorcycleController::class, 'update']);
 Route::delete('/motorcycle/destroy/{id}', [MotorcycleController::class, 'destroy']);
+Route::post('/motorcycle/upload', [MotorcycleController::class, 'upload']);
+Route::get('/motorcycle/image/{filename}', [MotorcycleController::class, 'getImage']);
 

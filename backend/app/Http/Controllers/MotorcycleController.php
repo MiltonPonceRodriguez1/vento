@@ -167,5 +167,56 @@ class MotorcycleController extends Controller
         return response()-> json($data, $data['code']);
     }
 
+    public function upload(Request $request) {
+        // Recoger la imagen de la peticion
+        $image = $request -> file('file0');
+
+        // Validar imagen
+        $validate = \Validator::make($request -> all(),[
+            'file0' => 'required|image|mimes:jpg,jpeg,png,gif'
+        ]);
+
+        // Guardar la imagen
+        if (!$image || $validate -> fails()) {
+            $data = array(
+                'code'      =>  400,
+                'status'    =>  'error',
+                'message'   =>  'Error al subir la imagen'
+            );
+        } else {
+            $image_name = time().$image -> getClientOriginalName();
+            \Storage::disk('motorcycles')->put($image_name, \File::get($image));
+
+            $data = array(
+                'code'      =>  200,
+                'status'    =>  'success',
+                'image'     =>  $image_name
+            );
+        }
+
+        // Devolver respuesta
+        return response()->json($data, $data['code']);
+    }
+
+    public function getImage($filename) {
+        // Comprobar si existe el fichero
+        $isset = \Storage::disk('motorcycles')->exists($filename);
+
+        if ($isset) {
+            // Conseguir la imagen
+            $file = \Storage::disk('motorcycles')->get($filename);
+
+            // Devolver la imagen
+            return new Response($file, 200);
+        } else {
+            // Mostrar el error
+            $data = array(
+                'code'      =>  404,
+                'status'    =>  'error',
+                'message'   =>  'La imagen no existe.'
+            );
+        }
+        return response()->json($data, $data['code']);
+    }
 
 }

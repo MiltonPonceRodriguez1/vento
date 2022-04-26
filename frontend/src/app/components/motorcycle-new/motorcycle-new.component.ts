@@ -38,7 +38,7 @@ export class MotorcycleNewComponent implements OnInit {
       },
       error => {
         console.log(<any>error);
-        this._toastr.error('ERROR: ' + error["message"], 'La motocicleta NO se ha agregado correctamente', {
+        this._toastr.error('ERROR: ' + error["error"]["message"], 'La motocicleta NO se ha agregado correctamente', {
           // timeOut: 3000,
           closeButton: true,
           // progressBar: true

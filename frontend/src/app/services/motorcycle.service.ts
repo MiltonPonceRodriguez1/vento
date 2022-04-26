@@ -19,7 +19,7 @@ export class MotorcycleService {
         return "Hola desde el servicio motorcycle";
     }
 
-    add_motorcycle(motorcycle:Motorcycle): Observable<any> {
+    add_motorcycle(motorcycle: Motorcycle): Observable<any> {
         let json = JSON.stringify(motorcycle);
         let params = 'json='+json;
 

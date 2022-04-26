@@ -13,13 +13,15 @@ import { AppComponent } from './app.component';
 import { MotorcycleNewComponent } from './components/motorcycle-new/motorcycle-new.component';
 import { MotorcycleUpdateComponent } from './components/motorcycle-update/motorcycle-update.component';
 import { HomeComponent } from './components/home/home.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MotorcycleNewComponent,
     MotorcycleUpdateComponent,
-    HomeComponent
+    HomeComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

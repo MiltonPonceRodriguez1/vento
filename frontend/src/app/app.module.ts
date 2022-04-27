@@ -5,6 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFileUploaderModule } from "angular-file-uploader";
 import {DataTablesModule} from 'angular-datatables';
 
 // Imports de las rutas
@@ -33,8 +34,9 @@ import { MotorcyclesManageComponent } from './components/motorcycles-manage/moto
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    AngularFileUploaderModule,
     DataTablesModule,
-    ToastrModule.forRoot()
   ],
   providers: [
     appRoutingProviders

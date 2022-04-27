@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Motorcycle } from '../../models/motorcycle';
 import { MotorcycleService } from "../../services/motorcycle.service";
 import { ToastrService } from 'ngx-toastr';
+import { global } from '../../services/global';
 
 @Component({
   selector: 'app-motorcycle-new',
@@ -13,6 +14,33 @@ export class MotorcycleNewComponent implements OnInit {
 
   public page_title: string;
   public motorcycle: Motorcycle;
+  public afuConfig = {
+    multiple : false,
+    formatsAllowed : ".jpg, .png, .gif, .jpeg",
+    maxSize : 50,
+    uploadAPI: {
+      url : global.url + "motorcycle/upload",
+      headers : {"Authorization":"aqui hay una autorizacion"}
+    },
+    theme : "attachPin",
+    // theme : "dragNDrop",
+    hideProgressBar : false,
+    hideResetBtn : true,
+    hideSelectBtn : true,
+    fileNameIndex : false,
+    autoUpload : true,
+
+    replaceTexts: {
+      selectFileBtn: 'Select Files',
+      resetBtn: 'Reset',
+      uploadBtn: 'Upload',
+      dragNDropBox: 'Drag N Drop',
+      attachPinBtn: 'Elige una foto para la motocicleta',
+      afterUploadMsg_success: 'La foto se ha subido correctamente!',
+      afterUploadMsg_error: 'ERROR, la foto NO se ha subido correctamente!',
+      sizeLimit: 'Size Limit'
+    }
+  };
 
   constructor(
     private _motorcycleService: MotorcycleService,
@@ -48,6 +76,17 @@ export class MotorcycleNewComponent implements OnInit {
       }
     );
 
+  }
+
+  image_upload(datos:any) {
+    console.log(datos);
+
+    if(datos.status == 200) {
+      // console.log("XDDDDDDDDDDDDDDD");
+      this._toastr.success( "La foto fue agregada correctamente.", "La foto fue agregada correctamente!", {
+        closeButton: true
+      });
+    }
   }
 
 }

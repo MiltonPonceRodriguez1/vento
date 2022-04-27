@@ -169,11 +169,11 @@ class MotorcycleController extends Controller
 
     public function upload(Request $request) {
         // Recoger la imagen de la peticion
-        $image = $request -> file('file0');
+        $image = $request -> file('file');
 
         // Validar imagen
         $validate = \Validator::make($request -> all(),[
-            'file0' => 'required|image|mimes:jpg,jpeg,png,gif'
+            'file' => 'required|image|mimes:jpg,jpeg,png,gif'
         ]);
 
         // Guardar la imagen

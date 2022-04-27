@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark test_nav">
   <div class="container-fluid">
     <a class="navbar-brand" [routerLink]="['/']">
-      <img src="assets/images/logo.png" width="235px"  class="d-inline-block align-top mr-2" alt="">
+      <img src="assets/images/logo.png" width="235px" class="d-inline-block align-top mr-2" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,8 +12,8 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" id="manageDropdown" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link active dropdown-toggle" id="manageDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             <!--<i class="fa-brands fa-d-and-d fa-2x"></i>
             <i class="fa fa-twitter fa-1x"></i>-->
             <i class="fa-solid fa-bicycle"></i>
@@ -63,65 +63,65 @@
           <span class="fs-5 d-none d-sm-inline">Vento Motorcycle</span>
         </a>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-            <li class="nav-item">
-                <a href="#" class="nav-link align-middle px-0">
-                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
-                </a>
-            </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link align-middle px-0">
+              <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+            </a>
+          </li>
 
-            <li>
-                <a class="nav-link px-0 align-middle text-white" [routerLink]="['/']">
-                    <fa-icon [icon]="faGaugeHigh"></fa-icon>
-                    <span class="ms-1 d-none d-sm-inline">Dashboard</span>
-                </a>
-            </li>
+          <li>
+            <a class="nav-link px-0 align-middle text-white" [routerLink]="['/']">
+              <fa-icon [icon]="faGaugeHigh"></fa-icon>
+              <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+            </a>
+          </li>
 
-            <li>
-                <a href="#" class="nav-link px-0 align-middle text-white">
-                <fa-icon [icon]="faUserLock"></fa-icon>
-                <span class="ms-1 d-none d-sm-inline">Orders</span>
-                </a>
-            </li>
+          <li>
+            <a href="#" class="nav-link px-0 align-middle text-white">
+              <fa-icon [icon]="faUserLock"></fa-icon>
+              <span class="ms-1 d-none d-sm-inline">Orders</span>
+            </a>
+          </li>
 
-            <li>
-                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white">
-                    <fa-icon [icon]="faMotorcycle"></fa-icon>
-                    <span class="ms-1 d-none d-sm-inline">Productos</span>
-                </a>
+          <li>
+            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-white">
+              <fa-icon [icon]="faMotorcycle"></fa-icon>
+              <span class="ms-1 d-none d-sm-inline">Productos</span>
+            </a>
 
-                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                    <li class="w-100">
-                        <a href="#" class="nav-link px-0 text-white">
-                            <fa-icon [icon]="faBorderAll" class="px-2"></fa-icon>
-                            <span class="d-none d-sm-inline">Todos los productos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link px-0 text-white" [routerLink]="['/add-motorcycle']">
-                            <fa-icon [icon]="faPlusCircle" class="px-2"></fa-icon>
-                            <span class="d-none d-sm-inline">Añadir nuevo</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link px-0 text-white">
-                            <fa-icon [icon]="faEdit" class="px-2"></fa-icon>
-                            <span class="d-none d-sm-inline">Editar</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link px-0 text-white">
-                            <fa-icon [icon]="faTrash" class="px-2"></fa-icon>
-                            <span class="d-none d-sm-inline">Eliminar</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link px-0 text-white">
-                            <fa-icon [icon]="faTags" class="px-2"></fa-icon>
-                            <span class="d-none d-sm-inline">Categoria</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+              <li class="w-100">
+                <a href="#" class="nav-link px-0 text-white">
+                  <fa-icon [icon]="faBorderAll" class="px-2"></fa-icon>
+                  <span class="d-none d-sm-inline">Todos los productos</span>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link px-0 text-white" [routerLink]="['/add-motorcycle']">
+                  <fa-icon [icon]="faPlusCircle" class="px-2"></fa-icon>
+                  <span class="d-none d-sm-inline">Añadir nuevo</span>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link px-0 text-white" [routerLink]="['/manage-motorcycle']">
+                  <fa-icon [icon]="faListCheck" class="px-2"></fa-icon>
+                  <span class="d-none d-sm-inline">Gestionar</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0 text-white">
+                  <fa-icon [icon]="faTrash" class="px-2"></fa-icon>
+                  <span class="d-none d-sm-inline">Eliminar</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0 text-white">
+                  <fa-icon [icon]="faTags" class="px-2"></fa-icon>
+                  <span class="d-none d-sm-inline">Categoria</span>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li>
             <a href="#" class="nav-link px-0 align-middle text-white">
               <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
@@ -132,7 +132,7 @@
           <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
             id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-            <span class="d-none d-sm-inline mx-1">loser</span>
+            <span class="d-none d-sm-inline mx-1">User</span>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
             <li><a class="dropdown-item" href="#">New project...</a></li>

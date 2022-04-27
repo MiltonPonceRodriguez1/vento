@@ -1,11 +1,14 @@
 
 <div class="col-md-12">
 
-    <h1>Agregar Motocicleta</h1>
+    <div class="text-center">
+        <h1>{{page_title}}</h1>
+    </div>
+
 
     <form class="col-md-5 ml-0 pl-0" #new_motorcycle_form="ngForm" (ngSubmit)="on_submit(new_motorcycle_form)">
         <div class="form-group">
-            <label for="model">Modelo (model)</label>
+            <label for="model">Modelo:</label>
             <input type="text" name="model" class="form-control" #model="ngModel" [(ngModel)]="motorcycle.model" required>
 
             <small *ngIf="!model.valid && model.touched" class="invalid-feedback d-block">
@@ -14,27 +17,27 @@
         </div>
 
         <div class="form-group">
-            <label for="min_price">Precio minimo (min_price)</label>
+            <label for="min_price">Precio Rebajado:</label>
             <input type="number" name="min_price" class="form-control" #min_price="ngModel" [(ngModel)]="motorcycle.min_price">
         </div>
 
         <div class="form-group">
-            <label for="max_price">Precio maximo (max_price)</label>
+            <label for="max_price">Precio Real:</label>
             <input type="number" name="max_price" class="form-control" #max_price="ngModel" [(ngModel)]="motorcycle.max_price">
         </div>
 
         <div class="form-group">
-            <label for="onsale">En venta (onsale)</label>
+            <label for="onsale">En venta: </label>
             <input type="number" name="onsale" class="form-control" #onsale="ngModel" [(ngModel)]="motorcycle.onsale">
         </div>
 
         <div class="form-group">
-            <label for="stock_quantity">Cantidad en stock (stock_quantity)</label>
+            <label for="stock_quantity">Cantidad en Stock:</label>
             <input type="number" name="stock_quantity" class="form-control" #stock_quantity="ngModel" [(ngModel)]="motorcycle.stock_quantity">
         </div>
 
         <div class="form-group">
-            <label for="stock_status">Estado en stock (stock_status)</label>
+            <label for="stock_status">Estado en Stock:</label>
             <input type="text" name="stock_status" class="form-control" #stock_status="ngModel" [(ngModel)]="motorcycle.stock_status">
         </div>
 
@@ -77,7 +80,10 @@
         </div>
 
         <!-- Para poner el boton desabilitado cuando no son validos 62 -->
-        <input type="submit" value="add-motorcycle" class="btn btn-success">
+        <div class="text-center mt-3">
+            <input type="submit" value="Agregar Motocicleta" class="btn btn-outline-success">
+        </div>
+
 
     </form>
 

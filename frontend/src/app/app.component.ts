@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faMotorcycle, faUserLock, faPlusCircle, faBorderAll, faGaugeHigh, faEdit, faTrash, faTags } from '@fortawesome/free-solid-svg-icons';
+import { faMotorcycle, faUserLock, faPlusCircle, faBorderAll, faGaugeHigh, faEdit, faTrash, faTags, faListCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -16,4 +16,5 @@ export class AppComponent {
   faEdit = faEdit;
   faTrash = faTrash;
   faTags = faTags;
+  faListCheck = faListCheck;
 }

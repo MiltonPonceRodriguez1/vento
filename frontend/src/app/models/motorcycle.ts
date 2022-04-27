@@ -11,6 +11,7 @@ export class Motorcycle {
         public average_rating: number,
         public total_sales: number,
         public tax_status: string,
-        public tax_class: string
+        public tax_class: string,
+        public image: string,
     ){}
 }

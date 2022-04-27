@@ -47,7 +47,7 @@ export class MotorcycleNewComponent implements OnInit {
     private _toastr: ToastrService
   ) {
     this.page_title = "Agregar Nueva Motocicleta";
-    this.motorcycle = new Motorcycle(1, '', 1, 2, 0, 0, 'instock', 0, 0, 0, 'tax status', 'tax class');
+    this.motorcycle = new Motorcycle(1, '', 1, 2, 0, 0, 'instock', 0, 0, 0, 'tax status', 'tax class', '');
   }
 
   ngOnInit(): void {
@@ -79,11 +79,14 @@ export class MotorcycleNewComponent implements OnInit {
   }
 
   image_upload(datos:any) {
-    console.log(datos);
-
+    // console.log(datos);
     if(datos.status == 200) {
-      // console.log("XDDDDDDDDDDDDDDD");
+      this.motorcycle.image = datos.body.image;
       this._toastr.success( "La foto fue agregada correctamente.", "La foto fue agregada correctamente!", {
+        closeButton: true
+      });
+    } else {
+      this._toastr.error( "La foto NO fue agregada correctamente.", "La foto NO fue agregada correctamente!", {
         closeButton: true
       });
     }

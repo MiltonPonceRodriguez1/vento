@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/motorcycle/index', [MotorcycleController::class, 'index']);
+Route::get('/motorcycle/datatable', [MotorcycleController::class, 'datatable']);
 Route::post('/motorcycle/store', [MotorcycleController::class, 'store']);
 Route::put('/motorcycle/update/{id}', [MotorcycleController::class, 'update']);
 Route::delete('/motorcycle/destroy/{id}', [MotorcycleController::class, 'destroy']);

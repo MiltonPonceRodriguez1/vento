@@ -23,5 +23,6 @@ class Motorcycle extends Model
         'total_sales',
         'tax_status',
         'tax_class',
+        'image'
     ];
 }

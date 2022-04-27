@@ -60,6 +60,7 @@ class MotorcycleController extends Controller
                 $motorcycle->total_sales = $params->total_sales;
                 $motorcycle->tax_status = $params->tax_status;
                 $motorcycle->tax_class = $params->tax_class;
+                $motorcycle->image = $params->image;
 
                 $motorcycle->save();
 
@@ -217,6 +218,11 @@ class MotorcycleController extends Controller
             );
         }
         return response()->json($data, $data['code']);
+    }
+
+    public function datatable() {
+        $motorcycles = Motorcycle::all();
+        return response()->json($motorcycles, 200);
     }
 
 }

@@ -5,6 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DataTablesModule} from 'angular-datatables';
 
 // Imports de las rutas
 import { routing, appRoutingProviders } from "./app.routing";
@@ -14,6 +15,7 @@ import { MotorcycleNewComponent } from './components/motorcycle-new/motorcycle-n
 import { MotorcycleUpdateComponent } from './components/motorcycle-update/motorcycle-update.component';
 import { HomeComponent } from './components/home/home.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { MotorcyclesManageComponent } from './components/motorcycles-manage/motorcycles-manage.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     MotorcycleNewComponent,
     MotorcycleUpdateComponent,
     HomeComponent,
-    SidebarComponent
+    SidebarComponent,
+    MotorcyclesManageComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    DataTablesModule,
     ToastrModule.forRoot()
   ],
   providers: [

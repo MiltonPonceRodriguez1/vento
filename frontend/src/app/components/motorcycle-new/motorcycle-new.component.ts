@@ -11,13 +11,15 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class MotorcycleNewComponent implements OnInit {
 
+  public page_title: string;
   public motorcycle: Motorcycle;
 
   constructor(
     private _motorcycleService: MotorcycleService,
     private _toastr: ToastrService
   ) {
-    this.motorcycle = new Motorcycle(1, '', 1, 2, 0, 0, 'instock', 0, 0, 0, 'tax statud', 'tax class');
+    this.page_title = "Agregar Nueva Motocicleta";
+    this.motorcycle = new Motorcycle(1, '', 1, 2, 0, 0, 'instock', 0, 0, 0, 'tax status', 'tax class');
   }
 
   ngOnInit(): void {
@@ -38,7 +40,7 @@ export class MotorcycleNewComponent implements OnInit {
       },
       error => {
         console.log(<any>error);
-        this._toastr.error('ERROR: ' + error["error"]["message"], 'La motocicleta NO se ha agregado correctamente', {
+        this._toastr.error('ERROR: ' + error["error"]["message"], 'La motocicleta NO se guardo correctamente', {
           // timeOut: 3000,
           closeButton: true,
           // progressBar: true

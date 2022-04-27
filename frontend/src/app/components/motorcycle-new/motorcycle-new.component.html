@@ -68,6 +68,14 @@
             <!-- <input type="text" name="tax_class"> -->
         </div>
 
+        <div class="form-group">
+            <label for="image">Imagen</label>
+            <angular-file-uploader
+                [config]="afuConfig"
+                (ApiResponse)="image_upload($event)">
+            </angular-file-uploader>
+        </div>
+
         <!-- Para poner el boton desabilitado cuando no son validos 62 -->
         <input type="submit" value="add-motorcycle" class="btn btn-success">
 

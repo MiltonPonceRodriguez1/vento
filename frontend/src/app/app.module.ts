@@ -5,6 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFileUploaderModule } from "angular-file-uploader";
 
 // Imports de las rutas
 import { routing, appRoutingProviders } from "./app.routing";
@@ -30,7 +31,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    AngularFileUploaderModule
   ],
   providers: [
     appRoutingProviders
